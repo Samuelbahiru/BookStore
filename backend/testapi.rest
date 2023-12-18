@@ -1,0 +1,28 @@
+POST http://localhost:5555/books/new/
+Content-Type: application/json
+
+{
+  "title": "Book 2",
+  "author": "samuel",
+  "publishYear": 2003
+} 
+
+
+###
+
+GET http://localhost:5555/books/
+
+###
+
+PUT http://localhost:5555/books/update/657ff4eab3bce034e69cc5a9
+Content-Type: application/json
+
+{
+  "title": "Book 4",
+  "author": "ab",
+  "publishYear": 2003
+}
+
+###
+DELETE http://localhost:5555/books/delete/657ff4eab3bce034e69cc5a9
+
