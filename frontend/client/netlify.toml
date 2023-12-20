@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"  # Replace with your build script
+  publish = "frontend/client/dist"  # Replace with your frontend build directory
+
+[build.environment]
+  REACT_APP_BACKEND_URL = "https://bookstore-server-0jma.onrender.com/books"  # Replace with your backend API endpoint
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
