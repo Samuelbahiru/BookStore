@@ -5,7 +5,7 @@ import axios from "axios";
 import moment from "moment";
 
 function App() {
-  const APIBASE = "http://localhost:5555/books";
+  const APIBASE = "https://bookstore-server-0jma.onrender.com/books";
   const [data, setData] = useState([]);
   const [curentRecordID, setCurrentRecordId] = useState(0);
   const [isEdit, setIsEdit] = useState(false);
