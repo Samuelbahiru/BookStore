@@ -6,6 +6,7 @@ const router = express.Router();
 router.get("/", async (req, res) => {
   try {
     const books = await Book.find();
+    console.log("for", books);
     res.status(200).json(books);
   } catch (error) {
     res.status(400).send({
@@ -29,7 +30,7 @@ router.post("/new", async (req, res) => {
       };
 
       const book = new Book(newBook);
-
+      console.log("post", book);
       await book.save();
       return res.json({
         message: "Book created successfully",
